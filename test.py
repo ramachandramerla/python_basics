@@ -8,3 +8,15 @@ name=name.capitalize()
 #starting letter of every string is capital
 name= name.title()
 print("Hello",name)
+
+#Day-2
+# creating a define function to use anywhere within the code repetative times
+def main():
+    x=int(input("please provide the X value "))
+    print("X Square is", square(x))
+
+def square(n):
+    print("the value is working only before the return value")
+    return   n*n
+    
+main()
