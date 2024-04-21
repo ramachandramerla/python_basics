@@ -1,4 +1,4 @@
-# Day-1
+'''# Day-1
 # Input a variable and remove spaces  
 name=input("What is your name ?").strip().capitalize().title()
 #remove the spaces from the string inserted by the user
@@ -30,4 +30,22 @@ elif marks>=70:
 elif marks>=50:
     print("SC")
 else:
-    print ("Fail")        
+    print ("Fail")
+'''
+# Day -3 
+# getting familir with the def function
+def main():
+    value=int(input("Give the Input value for the testing the def functions : "))
+    if is_even(value) == True:
+        print("Number is EVEN")
+    else:
+        print("Number is ODD")
+# I created a function with in the program to use multiple times of the function "is_even"
+def is_even(n):
+    if n % 2==0:
+        return True
+    else:
+        return False
+
+main()
+         
