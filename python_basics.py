@@ -1,4 +1,4 @@
-'''# Day-1
+# Day-1
 # Input a variable and remove spaces  
 name=input("What is your name ?").strip().capitalize().title()
 #remove the spaces from the string inserted by the user
@@ -48,7 +48,7 @@ def is_even(n):
         return False
 
 main()
-'''
+
 # match statement similar to the if elif else conditions.
 name = input("give me the name : ")
 
@@ -58,4 +58,56 @@ match name:
     case "chh":
         print("Goodd")
     case _:
-        print("Who???")        
+        print("Who???")
+'''        
+'''
+#Loops
+# while loop
+i=int(input("Give the number of times you want to loop : "))
+j=int(input("Give the end number : "))
+if i<j:
+    while i<j:
+        print("Done")
+        i=i+1
+else:
+    print("I is greater than J")    
+
+#while True if the while loop condition is true then it will break the loop and come out of the loop 
+while True:
+    n= int(input("Give me he number : "))
+    if n>0:
+        break
+for _ in range(n):
+    print("Tryeee")
+
+# def function inside the for loop
+def main():
+    number = get_number()
+    play(number)
+
+def get_number():
+    n=int(input("Give the number : "))
+    return n
+
+def play(n):
+    for _ in range(n):
+        print("Gooooooo")
+main()    
+
+# list which are in students list of the values to add in the rows by adding the 1st column
+
+students=["Chan","Abhi","Chaaaaa","qpr","jar"]
+
+for i in range(len(students)):
+    print(i+1, students[i])
+
+#Dict which are in the values defined below.
+
+students = {
+        "asda":"manvi",
+        "dhdt": "hggg",
+        "eetete":"sdr"}
+
+for student in students:
+        print(student.title(),students[student].title(),sep=', ')
+ 
