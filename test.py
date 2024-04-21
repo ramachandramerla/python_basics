@@ -1,1 +1,10 @@
-# this is used to test the environment connection
+# Day-1
+# Input a variable and remove spaces  
+name=input("What is your name ?").strip().capitalize().title()
+#remove the spaces from the string inserted by the user
+name=name.strip()
+#first string Capital
+name=name.capitalize()
+#starting letter of every string is capital
+name= name.title()
+print("Hello",name)
