@@ -20,3 +20,14 @@ def square(n):
     return   n*n
     
 main()
+
+#Day-3 if , elif,else functions 
+marks=int(input("Value of X : "))
+if marks >=90:
+    print("Distinction")
+elif marks>=70:
+    print("FC")
+elif marks>=50:
+    print("SC")
+else:
+    print ("Fail")        
