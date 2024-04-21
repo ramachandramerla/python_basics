@@ -31,7 +31,7 @@ elif marks>=50:
     print("SC")
 else:
     print ("Fail")
-'''
+
 # Day -3 
 # getting familir with the def function
 def main():
@@ -48,4 +48,14 @@ def is_even(n):
         return False
 
 main()
-         
+'''
+# match statement similar to the if elif else conditions.
+name = input("give me the name : ")
+
+match name:
+    case "Cha" | "chw" | "che":  # case with or statement "|"
+        print("Good")
+    case "chh":
+        print("Goodd")
+    case _:
+        print("Who???")        
