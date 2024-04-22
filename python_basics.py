@@ -108,6 +108,15 @@ students = {
         "dhdt": "hggg",
         "eetete":"sdr"}
 
+print(students["asda"])
 for student in students:
-        print(student.title(),students[student].title(),sep=', ')
- 
+       print(student,students[student],sep=', ')
+
+#Printing the number of rows and columns 
+a = int(input("Number of Rows : "))
+b = int(input("Number of Columns : "))
+for i in range(a):
+    for j in range(b):
+        print("yes", end=' ')
+       
+    print()   
