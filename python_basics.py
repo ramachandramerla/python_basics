@@ -1,4 +1,4 @@
-# Day-1
+'''# Day-1
 # Input a variable and remove spaces  
 name=input("What is your name ?").strip().capitalize().title()
 #remove the spaces from the string inserted by the user
@@ -59,8 +59,7 @@ match name:
         print("Goodd")
     case _:
         print("Who???")
-'''        
-'''
+
 #Loops
 # while loop
 i=int(input("Give the number of times you want to loop : "))
@@ -120,3 +119,32 @@ for i in range(a):
         print("yes", end=' ')
        
     print()   
+
+#importing all the modules inside the random  
+import random
+df = random.choice(["Gowda","Chandu","Test"])
+print (df)
+
+#importing a specific choice from the random module 
+from random import choice
+df = choice(["A","B","C","D"])
+print (df)
+
+#getting additional pic between 2 integers from the module random
+import random
+num = random.randint(1,100)
+print (num)
+
+#from the random library using the shuffle
+import random
+
+cards=["K","Q","J"]
+random.shuffle(cards)
+print (cards) #print in a single line
+for i in cards: #using a for loop to get the shuffle data in rows
+    print(i)
+'''
+#module statistics getting familiar with the stats modules.
+import statistics
+df=statistics.mean([10,20])
+print(df)
