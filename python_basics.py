@@ -119,7 +119,7 @@ for i in range(a):
         print("yes", end=' ')
        
     print()   
-'''
+
 #importing all the modules inside the random  
 import random
 df = random.choice(["Gowda","Chandu","Test"])
@@ -148,3 +148,28 @@ for i in cards: #using a for loop to get the shuffle data in rows
 import statistics
 df=statistics.mean([10,20])
 print(df)
+'''
+
+#command line arguments
+#check for index error
+#while running the code give the name after the file name to get the correct output 
+#if you want to include the first name space and last name then use "" while executing the code.
+import sys
+if len(sys.argv)<2:
+    print("less Arguments")
+elif len(sys.argv)>2:
+    print("Many arguments")
+else:
+    print("Hello, My Name is",sys.argv[1])        
+
+#when we execute the same code with pnly if, elif and then indented print then we get the std output and along with that we get the index error 
+#in order to avoid the index error we use sys.exit fucntion to get out of the execution and print the standard keywords
+
+import sys
+
+if len(sys.argv)<2:
+    sys.exit("Less arguments")
+elif len(sys.argv)>2:
+    sys.exit("Too many arguments") 
+
+print("Hello, My name is",sys.argv[1])
