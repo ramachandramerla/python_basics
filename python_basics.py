@@ -119,7 +119,7 @@ for i in range(a):
         print("yes", end=' ')
        
     print()   
-
+'''
 #importing all the modules inside the random  
 import random
 df = random.choice(["Gowda","Chandu","Test"])
@@ -143,7 +143,7 @@ random.shuffle(cards)
 print (cards) #print in a single line
 for i in cards: #using a for loop to get the shuffle data in rows
     print(i)
-'''
+
 #module statistics getting familiar with the stats modules.
 import statistics
 df=statistics.mean([10,20])
