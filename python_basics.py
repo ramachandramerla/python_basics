@@ -149,7 +149,7 @@ import statistics
 df=statistics.mean([10,20])
 print(df)
 
-'''
+
 #command line arguments
 #check for index error
 #while running the code give the name after the file name to get the correct output 
@@ -173,7 +173,7 @@ elif len(sys.argv)>2:
     sys.exit("Too many arguments") 
 
 print("Hello,",sys.argv[1])
-
+X
 import sys
 
 if len(sys.argv)<2:
@@ -184,3 +184,26 @@ elif len(sys.argv) >2:
     sys.exit()    
 
 print("Hello :", sys.argv[1])
+'''
+'''
+# working with APi and Requests
+import sys
+import requests
+import json
+
+if len(sys.argv) != 2:
+    sys.exit()
+
+response = requests.get("https://itunes.apple.com/search?entity=song&limit=1&term=" + sys.argv[1])
+print(response.json())    
+'''
+#make a proper format for the api data we received
+import sys
+import requests
+import json
+
+if len(sys.argv)!=2:
+    sys.exit()
+
+response = requests.get("https://itunes.apple.com/search?entity=song&limit=1&term=" + sys.argv[1])
+print(json.dumps(response.json(),indent=2))
