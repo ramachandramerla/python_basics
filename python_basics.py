@@ -148,8 +148,8 @@ for i in cards: #using a for loop to get the shuffle data in rows
 import statistics
 df=statistics.mean([10,20])
 print(df)
-'''
 
+'''
 #command line arguments
 #check for index error
 #while running the code give the name after the file name to get the correct output 
@@ -172,4 +172,15 @@ if len(sys.argv)<2:
 elif len(sys.argv)>2:
     sys.exit("Too many arguments") 
 
-print("Hello, My name is",sys.argv[1])
+print("Hello,",sys.argv[1])
+
+import sys
+
+if len(sys.argv)<2:
+    print("less arguments")
+    sys.exit()
+elif len(sys.argv) >2:
+    print("Too many arguements")
+    sys.exit()    
+
+print("Hello :", sys.argv[1])
