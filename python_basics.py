@@ -197,7 +197,7 @@ if len(sys.argv) != 2:
 response = requests.get("https://itunes.apple.com/search?entity=song&limit=1&term=" + sys.argv[1])
 print(response.json())    
 '''
-
+'''
 #make a proper format for the api data we received
 import sys
 import requests
@@ -217,7 +217,31 @@ print("-------------------------------------------------------------------------
 o = response.json()
 for result in o["results"]:
     print(result["trackName"], result["trackPrice"])
-    
+'''
 
-        
+#def function additional content
+# this is used to create a libraries 
+# need to learn more on this one
+def main():
+    hello("a")
+    goodbye("a")
 
+def hello(name):
+    print(f"Hello.............,{name}")
+
+def goodbye(name):
+    print(f"Bye.................................., {name}")
+
+if __name__ == "__main__":
+    main()
+
+#create a new python file adding below content and write the below code to test the values for getting output
+#creating a library
+import sys
+from python_basics import goodbye
+from python_basics import hello
+
+if len(sys.argv)==2:
+    hello(sys.argv[1])
+else:
+    goodbye(sys.argv[1])
