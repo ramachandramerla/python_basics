@@ -218,10 +218,11 @@ o = response.json()
 for result in o["results"]:
     print(result["trackName"], result["trackPrice"])
 '''
-
+'''
 #def function additional content
 # this is used to create a libraries 
 # need to learn more on this one
+
 def main():
     hello("a")
     goodbye("a")
@@ -245,3 +246,14 @@ if len(sys.argv)==2:
     hello(sys.argv[1])
 else:
     goodbye(sys.argv[1])
+'''
+def chandu(x,y):
+    result = x + y
+    return result
+
+a=int(input("give a 1st number "))
+b=int(input("give a 2nd number "))
+
+result = chandu(a,b)
+print("printing outside the loop",result)
+print("using direct call value",chandu(a,b))
