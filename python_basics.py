@@ -247,6 +247,7 @@ if len(sys.argv)==2:
 else:
     goodbye(sys.argv[1])
 '''
+'''
 def chandu(x,y):
     result = x + y
     return result
@@ -257,3 +258,17 @@ b=int(input("give a 2nd number "))
 result = chandu(a,b)
 print("printing outside the loop",result)
 print("using direct call value",chandu(a,b))
+'''
+def avg_marks(marks):
+    sum_marks=sum(marks)
+    print(sum_marks)
+    total_marks=len(marks)
+    print(total_marks)
+    avg= sum_marks / total_marks
+    return avg
+
+marks=[10,20,30,40,50]
+
+result=avg_marks(marks)
+
+print(result)
