@@ -297,3 +297,12 @@ while (n > 0):
 
 print(sum)
 '''
+
+#Assert 
+#pytest need to learn and used to test the test cases with out writing the print or return statements in the programme. 
+#package
+
+# file I/O
+
+name=input("Give a Name: ")
+print (f"Hello, {name}")
