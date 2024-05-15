@@ -299,10 +299,19 @@ print(sum)
 '''
 
 #Assert 
-#pytest need to learn and used to test the test cases with out writing the print or return statements in the programme. 
+#pytest -- Need to learn and used to test the test cases with out writing the print or return statements in the programme. 
 #package
 
-# file I/O
-
+#file I/O
+'''
 name=input("Give a Name: ")
-print (f"Hello, {name}")
+print (f"Hello, {name}")'''
+
+#Sort the given list
+names=[]
+for _ in range(3): names.append(input("Gave a Name: "))
+print(names)
+temp=[]
+for i in sorted(names): 
+    temp.append(i)
+print(temp)   
