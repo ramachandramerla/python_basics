@@ -259,6 +259,7 @@ result = chandu(a,b)
 print("printing outside the loop",result)
 print("using direct call value",chandu(a,b))
 '''
+'''
 def avg_marks(marks):
     sum_marks=sum(marks)
     print(sum_marks)
@@ -272,3 +273,25 @@ marks=[10,20,30,40,50]
 result=avg_marks(marks)
 
 print(result)
+'''
+def main():
+    a=input()
+    return a
+
+def chandu(x):
+    result= x + x 
+    print(result)
+
+
+chandu()
+main()
+
+#reverse a given number 
+n=int(input())
+sum=0
+while (n > 0):
+    digit=n%10
+    sum = sum*10 + digit 
+    n=n//10
+
+print(sum)
