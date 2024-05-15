@@ -274,6 +274,7 @@ result=avg_marks(marks)
 
 print(result)
 '''
+'''
 def main():
     a=input()
     return a
@@ -295,3 +296,4 @@ while (n > 0):
     n=n//10
 
 print(sum)
+'''
