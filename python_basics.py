@@ -296,16 +296,16 @@ while (n > 0):
     n=n//10
 
 print(sum)
-'''
+
 
 #Assert 
 #pytest -- Need to learn and used to test the test cases with out writing the print or return statements in the programme. 
 #package
 
 #file I/O
-'''
+
 name=input("Give a Name: ")
-print (f"Hello, {name}")'''
+print (f"Hello, {name}")
 
 #Sort the given list
 names=[]
@@ -317,3 +317,25 @@ for i in sorted(names):
 print(temp)   
 
 #testing the Dev_A branch
+'''
+'''
+#Open how to create a file and write something in the file created
+
+names = input()
+
+file=open("test.txt","a") #a is used to append the content
+file.write(f"{names} \n")
+file.close
+'''
+#Open a file which you have svaed above and then pass a arg 
+#once the file is created then open it using the code.
+#if we want to add the default arguments
+names = []
+
+with open("test.txt") as file:
+    for i in file:
+        names.append(i)
+
+
+for name in (names):
+    print(f"Hello {name}",end="")
