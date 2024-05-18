@@ -326,10 +326,11 @@ names = input()
 file=open("test.txt","a") #a is used to append the content
 file.write(f"{names} \n")
 file.close
-'''
-#Open a file which you have svaed above and then pass a arg 
+
+#Open a file which you have saved above and then pass a arg 
 #once the file is created then open it using the code.
 #if we want to add the default arguments
+
 names = []
 
 with open("test.txt") as file:
@@ -339,3 +340,24 @@ with open("test.txt") as file:
 
 for name in (names):
     print(f"Hello {name}",end="")
+'''
+"""student=[]
+with open("student.csv") as file:
+    for line in file:
+        name,house=line.rstrip().split(",")
+        student.append(f"{name} is in {house}")
+
+for i in sorted(student):
+    print(i)
+"""
+students=[]
+
+with open("student.csv") as file:
+    for line in file: 
+        name,city=line.rstrip().split(",") 
+        stuednt={} #instead of below 3 lines use : student={"name":name,"city":city}
+        stuednt["name"]=name
+        stuednt["city"]=city
+        students.append(stuednt)
+
+for i in students: print(i)
