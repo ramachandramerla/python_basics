@@ -355,9 +355,9 @@ students=[]
 with open("student.csv") as file:
     for line in file: 
         name,city=line.rstrip().split(",") 
-        stuednt={} #instead of below 3 lines use : student={"name":name,"city":city}
-        stuednt["name"]=name
-        stuednt["city"]=city
-        students.append(stuednt)
+        stnd = {"name": name,"city": city}
+        students.append(stnd)
 
-for i in students: print(i)
+
+for i in stnd:
+    print(i)
