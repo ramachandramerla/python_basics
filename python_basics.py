@@ -350,7 +350,7 @@ with open("student.csv") as file:
 for i in sorted(student):
     print(i)
 """
-students=[]
+"""students=[]
 
 with open("student.csv") as file:
     for line in file: 
@@ -360,4 +360,47 @@ with open("student.csv") as file:
 
 
 for i in stnd:
-    print(i)
+    print(i)"""
+
+
+# importing a csv file to read easily when we have a other delimiter in the text
+#other ways to print the dta we have
+import csv
+
+students=[]
+
+with open("student.csv") as file:
+    reader=csv.reader(file)
+    for name,home in reader:
+        students.append({"name":name,"home":home})
+
+for student in sorted(students,key=lambda student: student ["name"]):
+    print(f'{student["name"]} is in {student["home"]}') 
+           
+
+#Using the DictReader
+#this will work even columns are interchanged this is used to read the file
+
+import csv
+
+students=[]
+
+with open("student.csv") as file:
+    reader=csv.DictReader(file)
+    for row in reader:
+        students.append({"name":row["name"],"home":row["home"]})
+
+for student in sorted(students,key=lambda student: student ["name"]):
+    print(f'{student["name"]} is in {student["home"]}')
+         
+
+#using the DictWriter to update the CSV file
+import csv
+
+name=input("input a name: ")
+home=input("input a house: ")
+
+with open("student.csv",'a') as file:
+    writer= csv.DictWriter(file, fieldnames=["name","home"])
+    writer.writerow({"name":name, "home":home})
+    
