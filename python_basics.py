@@ -362,7 +362,7 @@ with open("student.csv") as file:
 for i in stnd:
     print(i)"""
 
-
+'''
 # importing a csv file to read easily when we have a other delimiter in the text
 #other ways to print the dta we have
 import csv
@@ -403,4 +403,19 @@ home=input("input a house: ")
 with open("student.csv",'a') as file:
     writer= csv.DictWriter(file, fieldnames=["name","home"])
     writer.writerow({"name":name, "home":home})
-    
+    '''
+
+#creating a Gif's using "arg"
+#import image and take 2 images and combine them with a 200 millisec to make a Gif 
+import sys
+
+from PIL import Image
+
+images=[]
+
+for arg in sys.argv[1:]:
+    image=image.open(arg)
+    images.append(image)
+
+images[0].save(
+    "costumes.gif", save_all=True, append_images=[image[1]],duration=200, loop=0)
