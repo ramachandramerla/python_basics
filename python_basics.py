@@ -404,7 +404,7 @@ with open("student.csv",'a') as file:
     writer= csv.DictWriter(file, fieldnames=["name","home"])
     writer.writerow({"name":name, "home":home})
     '''
-
+'''
 #creating a Gif's using "arg"
 #import image and take 2 images and combine them with a 200 millisec to make a Gif 
 import sys
@@ -419,3 +419,46 @@ for arg in sys.argv[1:]:
 
 images[0].save(
     "costumes.gif", save_all=True, append_images=[image[1]],duration=200, loop=0)
+'''
+#Regular Expressions:
+#regexes
+
+"""#without regex functions
+email=input("Give Email Id to validate: ")
+
+if '@' in email and "." in email:
+    print("Valid")
+else:
+    print("invalid")    """
+
+"""
+#Syntax for Regex
+#re.search(pattern, string,flags=0)
+email=input("Give Email Id to validate: ").rstrip() #remove the spaces beginning and end
+
+username,domain=email.split("@") # split the value with the keyword @
+print(f'{username},{domain}')
+if username and domain.endswith(".com"):
+    print("Valid")
+else:
+    print("invalid")    
+"""
+"""import re
+
+email=input("give a email : ").rstrip()
+
+if re.search("@",email): 
+    print("valid")
+
+else:
+    print("invalid")     
+"""
+import re
+email=input("input an email : ")
+
+if re.search(r"^.+@.+\.edu$",email):  # "." is any character "@ is mentioned specific character", "\." means consider the . for searching the array, ^ start with, $ means end with
+    print("VALID")
+
+else:
+    print("invalid")    
+
