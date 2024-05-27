@@ -1,4 +1,5 @@
-'''# Day-1
+'''
+# Day-1
 # Input a variable and remove spaces  
 name=input("What is your name ?").strip().capitalize().title()
 #remove the spaces from the string inserted by the user
@@ -420,9 +421,10 @@ for arg in sys.argv[1:]:
 images[0].save(
     "costumes.gif", save_all=True, append_images=[image[1]],duration=200, loop=0)
 '''
-#Regular Expressions:
+"""#Regular Expressions:
+#re.split, re.refill, re.search, re.sub. prefix, re.replace
 #regexes
-
+"""
 """#without regex functions
 email=input("Give Email Id to validate: ")
 
@@ -443,31 +445,3 @@ if username and domain.endswith(".com"):
 else:
     print("invalid")    
 """
-"""import re
-
-email=input("give a email : ").rstrip()
-
-if re.search("@",email): 
-    print("valid")
-
-else:
-    print("invalid")     
-
-#import re
-email=input("input an email : ")
-
-if re.search(r"^.+@.",email):  # "." is any character "@ is mentioned specific character", "\." means consider the . for searching the array, ^ start with, $ means end with
-    print("VALID")
-
-else:
-    print("invalid")    
-
-"""
-name = input("Give the name: ").strip()
-for i in name:
-    last , first = name.split(",")
-    name=f"{first} {last}"
-print(name)
-
-
-
