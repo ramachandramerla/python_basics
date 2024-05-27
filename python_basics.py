@@ -452,13 +452,22 @@ if re.search("@",email):
 
 else:
     print("invalid")     
-"""
-import re
+
+#import re
 email=input("input an email : ")
 
-if re.search(r"^.+@.+\.edu$",email):  # "." is any character "@ is mentioned specific character", "\." means consider the . for searching the array, ^ start with, $ means end with
+if re.search(r"^.+@.",email):  # "." is any character "@ is mentioned specific character", "\." means consider the . for searching the array, ^ start with, $ means end with
     print("VALID")
 
 else:
     print("invalid")    
+
+"""
+name = input("Give the name: ").strip()
+for i in name:
+    last , first = name.split(",")
+    name=f"{first} {last}"
+print(name)
+
+
 
