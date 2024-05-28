@@ -445,3 +445,22 @@ if username and domain.endswith(".com"):
 else:
     print("invalid")    
 """
+#object oriented programming
+
+#basic example of the def functions
+#writing the if __name__=="__main__" is nothing but of creating a module or library
+
+def main():
+    name=get_name()
+    house=get_house()
+    print(f"{name} is in {house}")
+
+
+def get_name():
+    return input("Name : ")
+
+def get_house():
+    return input("House : ")
+
+if __name__=="__main__":
+    main()
