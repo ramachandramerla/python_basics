@@ -445,6 +445,7 @@ if username and domain.endswith(".com"):
 else:
     print("invalid")    
 """
+"""
 #object oriented programming
 
 #basic example of the def functions
@@ -461,6 +462,131 @@ def get_name():
 
 def get_house():
     return input("House : ")
+
+if __name__=="__main__":
+    main()
+    """
+"""
+#list based def function
+def main():
+    student = get_student()
+    if student[0]=="gowda":
+        student[1]="hikeeee"
+    print(f"{student[0]} is in {student[1]}")
+
+def get_student():
+    name=input("Name: ") 
+    House=input("House: ")
+    return [name,House]
+#if we use retun (name,House) this is a tuple and immutable
+
+if __name__=="__main__":
+    main()
+"""
+"""#CLASSES
+#OBJECTS
+#instance variable
+#methods
+#raise for exceptions
+#__str__
+
+
+class Student:
+    def __init__(self,name,house):
+        if not name:  # or if name==""
+            raise ValueError("Missing Name")
+        if house not in ["bng","cha","aaa"]:
+            raise ValueError("Incorrect Place/house")
+        self.name = name 
+        self.house = house
+    
+    def __str__(self):
+        return f"{self.name} is from {self.house}"
+        
+
+def main():
+    student=get_student()
+    print(f"{student.name} is from {student.house}")
+
+def get_student():
+    name=input("Name: ")
+    house=input("House: ")
+    student=Student(name,house)
+    return student
+ 
+
+if __name__=="__main__":
+    main()
+"""
+"""
+class Student:
+    def __init__(self,name,house,patronus):
+        if not name:  
+            raise ValueError("Missing Name")
+        if house not in ["bng","cha","aaa"]:
+            raise ValueError("Incorrect Place/house")
+        self.name = name 
+        self.house = house
+        self.patronus = patronus
+    
+    def __str__(self):
+        return f"{self.name} is from {self.house}"
+    
+    def charm(self):
+        if self.patronus=="stag":
+            return "cha"
+        elif self.patronus=="ccc":
+            return "ccc"
+        else:
+            return "everythins is working fine"
+
+
+        
+
+def main():
+    student=get_student()
+    print(f"{student.name} is from {student.house}")
+    print("Horreyyy")
+    print(student.charm())
+
+
+def get_student():
+    name=input("Name: ")
+    house=input("House: ")
+    patronus=input("patronus: ")
+    student=Student(name,house,patronus)
+    return student
+ 
+
+if __name__=="__main__":
+    main()
+"""
+
+class Student:
+    def __init__(self,name,house):
+        if not name:  
+            raise ValueError("Missing Name")
+        if house not in ["bng","cha","aaa"]:
+            raise ValueError("Incorrect Place/house")
+        self.name = name 
+        self.house = house
+    
+    def __str__(self):
+        return f"{self.name} is from {self.house}"
+    
+def main():
+    student=get_student()
+    print(student)
+    #print(f"{student.name} is from {student.house}") #both will work fine above and below
+    
+
+
+def get_student():
+    name=input("Name: ")
+    house=input("House: ")
+    student=Student(name,house)
+    return student
+ 
 
 if __name__=="__main__":
     main()
