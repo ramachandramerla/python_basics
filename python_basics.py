@@ -598,6 +598,8 @@ if __name__=="__main__":
 print(type(50))
 print(type("Hello world"))'''
 
+
+"""#class method below is the one way
 import random
 
 class Hat:
@@ -609,3 +611,32 @@ class Hat:
 
 hat = Hat()
 hat.sort('Harry')        
+"""'''
+#class method using the creation of the variables
+
+import random
+
+class Hat:
+    houses =['bangalore', 'Karnataka','Channasandra','Chandapura'] #directly create a variable houses and use within the class 
+
+    @classmethod
+    def sort(cls,name):
+        print(name, "is in ", random.choice(cls.houses))
+
+#instead a creating one more variable use directly Hat
+Hat.sort("Chandu")        
+'''
+
+class vault:
+    def __init__(self,party=0,party2=0,party3=0):
+        self.party=party
+        self.party2=party2
+        self.party3=party3
+
+    def __str__(self):
+        return f'{self.party} "gowda", {self.party2} "chandu", {self.party3} "cha'
+
+
+print(vault()) #if we dont give the values it taked default as o as defined above in the classs
+print(vault(10,20,30)) #if we give the values then it will take the values that we defined
+       
