@@ -561,7 +561,7 @@ def get_student():
 if __name__=="__main__":
     main()
 """
-
+"""
 class Student:
     def __init__(self,name,house):
         if not name:  
@@ -590,3 +590,22 @@ def get_student():
 
 if __name__=="__main__":
     main()
+
+    """
+
+'''
+#everything that we study is a aclass which is created by someone
+print(type(50))
+print(type("Hello world"))'''
+
+import random
+
+class Hat:
+    def __init__(self):
+        self.houses=['bangalore', 'Karnataka','Channasandra','Chandapura']
+
+    def sort(self, name):
+        print(name, "is in ",random.choice(self.houses))
+
+hat = Hat()
+hat.sort('Harry')        
