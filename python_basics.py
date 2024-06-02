@@ -1,3 +1,18 @@
+#Index
+
+#Function and Variable
+#Conditionals
+#Loops
+#Exceptions
+#Libraies
+#Unit Tests
+#File I/O
+#Regular Expressions
+#Object Oriented Programming
+#Et cetera
+
+
+
 '''
 # Day-1
 # Input a variable and remove spaces  
@@ -810,3 +825,97 @@ place=filter(is_chandu,students)
 for a in sorted(place,key=lambda x:x['house']):
     print(a['house'])
 '''
+
+'''
+#dictionary comprehensions
+
+students = ['chandu', 'gowda','spoo']
+
+data = []
+
+for i in students:
+    data.append({'name':i , 'house':'bang'})
+
+
+for i in data:
+    print(i)
+'''
+'''
+#different way for the above same code
+#grop of dict
+students = ['chandu', 'gowda','spoo']
+
+
+data=[{'name':student, 'house':'bng'} for student in students]
+
+for i in data:
+    print(i)
+'''
+'''
+#making a single dict
+#dict compreshension
+
+students=['chandu', 'gowda','spoo']
+
+data={i:'bang' for i in students}
+
+print(data)'''
+'''
+students=['chandu', 'gowda','spoo']
+
+for i in range(len(students)):
+    print(i,students[i])
+'''
+'''#if we need number should start from 1 then use i+1    
+students=['chandu', 'gowda','spoo']
+
+for i in range(len(students)):
+    print(i+1,students[i])'''
+    
+'''#enumurate    
+students=['chandu', 'gowda','spoo']
+
+for i, name in enumerate(students):
+    print(i,name)
+'''
+'''
+#generators
+
+x=int(input("give the range value: "))
+
+for i in range(x):
+    print("*"*i)
+    '''
+
+'''#this range will work on a limited range value
+def main():
+    n=int(input("give a range: "))
+    for s in sheep(n):
+        print(s)
+
+def sheep(n):
+    flock=[]
+    for i in range(n):
+        flock.append("*"*i)
+    return flock
+               
+
+if __name__=="__main__":
+    main()    
+'''
+
+'''
+#if we use the yield function any number of values can be generated
+#yield
+def main():
+    n=int(input("give a range: "))
+    for s in sheep(n):
+        print(s)
+
+def sheep(n):
+    for i in range(n):
+        yield ("*"*i)
+               
+
+if __name__=="__main__":
+    main()    '''
