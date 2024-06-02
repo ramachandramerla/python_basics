@@ -626,7 +626,7 @@ class Hat:
 #instead a creating one more variable use directly Hat
 Hat.sort("Chandu")        
 '''
-
+'''
 class vault:
     def __init__(self,party=0,party2=0,party3=0):
         self.party=party
@@ -639,4 +639,58 @@ class vault:
 
 print(vault()) #if we dont give the values it taked default as o as defined above in the classs
 print(vault(10,20,30)) #if we give the values then it will take the values that we defined
-       
+'''       
+'''
+students=[{'name':'chandu','house':'cngalore'},
+          {'name':'gowda','house':'ahandapura'}]
+
+houses=[]
+for i in students:
+    if i['house'] not in houses:
+        houses.append(i["house"])
+
+
+for hous in sorted(houses):
+    print(hous)
+
+'''
+'''
+#Global Variable Declaration use  the "global" keyword for defining outside the main function
+
+balance=0
+
+def main():
+    print("Initial Balance is : ",balance)
+    x=int(input("Deposit Amount : "))
+    y=int(input("WithDraw amount : "))
+    deposit(x)
+    withdraw(y)
+    print("Final Balance : ", balance)
+
+
+
+def deposit(n):
+    global balance
+    balance = balance + n
+
+def withdraw(n):
+    global balance
+    balance = balance - n
+
+if __name__=="__main__":
+    main()
+'''
+
+#constants
+
+class Cat:
+    MEOW=3
+
+    def meow(self):
+        for _ in range(Cat.MEOW):
+            print("Yup")
+
+
+#cat=Cat
+#cat.meow() or
+Cat().meow()
