@@ -114,3 +114,24 @@ for i in sorted(names):
     temp.append(i)
 print(temp)   
 
+
+#loops and printing based on the sorting techniquies
+students=[{'name':'chandu','house':'cngalore'},
+          {'name':'gowda','house':'ahandapura'}]
+
+houses=[]
+for i in students:
+    if i['house'] not in houses:
+        houses.append(i["house"])
+
+
+for hous in sorted(houses):
+    print(hous)
+
+
+#generators
+x=int(input("give the range value: "))
+
+for i in range(x):
+    print("*"*i)
+

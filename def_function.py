@@ -60,8 +60,8 @@ if __name__ == "__main__":
 #create a new python file adding below content and write the below code to test the values for getting output
 #creating a library
 import sys
-from python_basics import goodbye
-from python_basics import hello
+from index_content import goodbye
+from index_content import hello
 
 if len(sys.argv)==2:
     hello(sys.argv[1])
@@ -109,5 +109,101 @@ def chandu(x):
 chandu()
 main()
 
+#object oriented programming
+
+#basic example of the def functions
+#writing the if __name__=="__main__" is nothing but of creating a module or library
+
+def main():
+    name=get_name()
+    house=get_house()
+    print(f"{name} is in {house}")
 
 
+def get_name():
+    return input("Name : ")
+
+def get_house():
+    return input("House : ")
+
+if __name__=="__main__":
+    main()
+
+#list based def function
+def main():
+    student = get_student()
+    if student[0]=="gowda":
+        student[1]="hikeeee"
+    print(f"{student[0]} is in {student[1]}")
+
+def get_student():
+    name=input("Name: ") 
+    House=input("House: ")
+    return [name,House]
+#if we use retun (name,House) this is a tuple and immutable
+
+if __name__=="__main__":
+    main()
+
+
+#Global Variable Declaration use  the "global" keyword for defining outside the main function
+
+balance=0
+
+def main():
+    print("Initial Balance is : ",balance)
+    x=int(input("Deposit Amount : "))
+    y=int(input("WithDraw amount : "))
+    deposit(x)
+    withdraw(y)
+    print("Final Balance : ", balance)
+
+
+
+def deposit(n):
+    global balance
+    balance = balance + n
+
+def withdraw(n):
+    global balance
+    balance = balance - n
+
+if __name__=="__main__":
+    main()
+
+
+
+#using MAP function changed the yell from list to String
+def main():
+    yell('this','is', 'cs50')
+
+def yell(*words):
+    uppercased=map(str.upper,words)
+    print(*uppercased)
+
+
+if __name__=="__main__":
+    main() 
+
+#enumurate    
+students=['chandu', 'gowda','spoo']
+
+for i, name in enumerate(students):
+    print(i,name)
+
+
+#this range will work on a limited range value
+def main():
+    n=int(input("give a range: "))
+    for s in sheep(n):
+        print(s)
+
+def sheep(n):
+    flock=[]
+    for i in range(n):
+        flock.append("*"*i)
+    return flock
+               
+
+if __name__=="__main__":
+    main()

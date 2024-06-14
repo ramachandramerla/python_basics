@@ -38,3 +38,17 @@ else:
     print("Hello, My Name is",sys.argv[1])    
 
 
+#if we use the yield function any number of values can be generated
+#yield
+def main():
+    n=int(input("give a range: "))
+    for s in sheep(n):
+        print(s)
+
+def sheep(n):
+    for i in range(n):
+        yield ("*"*i)
+               
+
+if __name__=="__main__":
+    main()
