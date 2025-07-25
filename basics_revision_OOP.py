@@ -21,5 +21,13 @@ b = int(input("provide for y : "))
 print(cha.chandu(a,b))
 
 
+class Practice2:
+    
+    def chan(self,x,y):
+        self.x=x
+        self.y=y
+        return x**y
 
+cha2 = Practice2()
 
+print(cha2.chan(a,b))
