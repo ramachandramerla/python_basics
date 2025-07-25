@@ -1,6 +1,5 @@
-import pandas as pd
 
-#create a class
+#Create a class
 
 class Practice:
 
